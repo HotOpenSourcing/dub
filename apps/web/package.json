@@ -3,10 +3,10 @@
   "private": true,
   "license": "AGPL-3.0-or-later",
   "scripts": {
-    "dev": "pnpm prisma:generate && concurrently --kill-others \"next dev --turbopack --port 8888\"",
-    "build": "pnpm prisma:generate && next build",
+    "dev": "node init && pnpm prisma:generate && concurrently --kill-others \"next dev --turbopack --port 8888\"",
+    "build": "node init && pnpm prisma:generate && next build",
     "lint": "next lint",
-    "start": "next start",
+    "start": "node init && next start",
     "script": "tsx ./scripts/run.ts",
     "test": "pnpm prisma:generate && vitest -no-file-parallelism --bail=1",
     "test:e2e": "playwright test",

@@ -27,9 +27,9 @@
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "node init && tsup",
     "lint": "eslint src/",
-    "dev": "tsup --watch",
+    "dev": "node init && tsup --watch",
     "check-types": "tsc --noEmit"
   },
   "peerDependencies": {
